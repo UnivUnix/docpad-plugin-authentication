@@ -95,6 +95,8 @@ module.exports = (BasePlugin) ->
             opts = {}
             http = require('http')
             express = require('express')
+            bodyParser = require('body-parser')
+            
             if !docpad.serverExpress
                 opts.serverExpress = express()
                 opts.serverHttp = http.createServer(opts.serverExpress)
@@ -102,8 +104,8 @@ module.exports = (BasePlugin) ->
                 # We have to repeat it here because these express methods MUST be applied
                 # before any routes are applied
                 if cfg.middlewareBodyParser isnt false
-                    opts.serverExpress.use(express.urlencoded())
-                    opts.serverExpress.use(express.json())
+                    opts.serverExpress.use(bodyParser.urlencoded({extended: true}))
+                    opts.serverExpress.use(bodyParser.json())
 
                 docpad.setServer(opts)
                 docpad.log("info","Authentication: servers created")

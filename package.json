@@ -41,8 +41,9 @@
     "docpad": ">=6.3 <7"
   },
   "dependencies": {
-    "express": "~3.4.4",
+    "express": "^4.16.2",
     "express-session": "^1.10.3",
+    "body-parser": "^1.18.2",
     "passport": "^0.2.1",
     "passport-facebook": "latest",
     "passport-github": "^0.1.5",
@@ -50,7 +51,7 @@
     "passport-local": "^1.0.0",
     "passport-twitter": "latest",
     "underscore": "latest",
-    "safefs": "~3.1.0",
+    "safefs": "^4.1.0",
     "taskgroup": "~3.3.6"
   },
   "devDependencies": {
@@ -59,8 +60,8 @@
     "coffee-script": "^1.9.2",
     "docpad": ">=6.3 <7",
     "joe": "1.6.0",
-	"assert-helpers": "^4.4.0",
-	"joe-reporter-console": "1.2.1",
+    "assert-helpers": "^4.4.0",
+    "joe-reporter-console": "1.2.1",
     "projectz": "^0.5.0",
     "request": "~2.33.0"
   },
